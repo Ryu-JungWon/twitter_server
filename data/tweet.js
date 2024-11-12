@@ -56,6 +56,7 @@ export async function create(username, name, text){
 // 트윗을 변경
 export async function update(id, text){
     const tweet = tweets.find((tweet) => tweet.id === id)
+    // const tweet = await getById(id)
     if(tweet){
         tweet.text = text
     }
